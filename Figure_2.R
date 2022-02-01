@@ -1,18 +1,20 @@
-install.packages("/groups/nordborg/user/benjamin.jaegle/Documents/001_DATA/101_PAPER_DUPLICATION/ANALYSIS/017_plotting_GWAS_vs_SNPs/001_script/nucleR_2.24.0.tar.gz", repos = NULL, type = "source", dependencies = T)
-
-##### ploting SNP vs pvalue
+### packages to install
 library("plotrix")
 library("nucleR")
+### Setting up the path
+path_to_file <- "/groups/nordborg/user/benjamin.jaegle/Documents/001_DATA/101_PAPER_DUPLICATION/ANALYSIS/017_plotting_GWAS_vs_SNPs/GWAS_plot.pdf"
+path_to_csv <- "/groups/nordborg/user/benjamin.jaegle/Documents/001_DATA/015_duplication/013_GWAS/HETE/CSV_2/"
+### loading the RData
 load("/groups/nordborg/user/benjamin.jaegle/Documents/001_DATA/101_PAPER_DUPLICATION/ANALYSIS/017_plotting_GWAS_vs_SNPs/001_script/plotting_GWAS.RData")
-pdf("/groups/nordborg/user/benjamin.jaegle/Documents/001_DATA/101_PAPER_DUPLICATION/ANALYSIS/017_plotting_GWAS_vs_SNPs/GWAS_plot.pdf", width=10, height = 10)
+##### ploting SNP vs pvalue
+pdf(path_to_file, width=10, height = 10)
 par(fig=c(0,1,0,1), mar=c(0,0,0,0))
 plot(0,xlim=c(0, 140000000), ylim=c(0, 140000000), type="n", axes=F)
-setwd("/groups/nordborg/user/benjamin.jaegle/Documents/001_DATA/015_duplication/013_GWAS/HETE/CSV_2/")
+setwd(path_to_csv)
 all <- dir()
 chr_length <- c(0,34964571, 34964571+22037565, 34964571+22037565+25499034, 34964571+22037565+25499034+20862711)
 csv_2 <- all[grep("_2_", all)]
 SNP <- tools::file_path_sans_ext(csv_2)
-
 for(i in c(1:length(SNP))){
   chr <- strsplit(SNP[i],"_")[[1]][1]
   pos <- as.numeric(strsplit(SNP[i],"_")[[1]][2])
@@ -36,8 +38,10 @@ for(i in c(1:length(SNP))){
 
   if(length(which(file$positions>pos-500 & file$positions<pos+500 & -log10(file$pvals)>10))>1){
   if(length(file[,1])>0){
+    ###selecting based on the mafs
   file <- file[which(file$mafs>0.2),]
   if(length(file[,1])>0){
+    ###selecting based on the -log10(pvalue)
   file <- file[which(-log10(file$pvals)>10),]
   file_100 <- file
   chr_x <- file_100
