@@ -1,13 +1,14 @@
 # duplication-paper
 all script for figure and analysis of the duplication paper
-Basic SNP analysis:
+
+##### Basic SNP analysis:
 
 
 ### Running the GWAS:
 
 Using pygwas https://github.com/timeu/PyGWAS 
 
-###### example:
+##### example:
 
 pygwas run phenotype.csv -a kw -g 1001genomes_genotype -o "file.csv"
 
