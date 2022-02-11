@@ -2,7 +2,8 @@
 all script for figure and analysis of the duplication paper
 
 ### Basic SNP analysis:
-
+Original VCF matrix 
+https://doi.org/10.5281/zenodo.6025134
 
 ### Running the GWAS:
 
