@@ -16,9 +16,12 @@ pygwas run phenotype.csv -a kw -g 1001genomes_genotype -o "file.csv"
 
 ## Figure_1: 
 Getting the RData from 
-link to zenodo
 
+https://doi.org/10.1101/2021.11.15.468652
 
 
 ## Figure_2: 
+
+
+## Figure_3:
 
