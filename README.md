@@ -34,7 +34,7 @@ Blast software was download from https://ftp.ncbi.nlm.nih.gov/blast/executables/
 
 
 ## Methylation analysis
-The methylation status were generated using  and can be found in the additionnal file 1-8 of the publication
+The methylation status were generated as described in https://github.com/Gregor-Mendel-Institute/pyBsHap and can be found in the additionnal file 1-8 of the publication
 
 script: meythylation comparison_ref_vs_pacbio.R
 
