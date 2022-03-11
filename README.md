@@ -1,5 +1,5 @@
 # duplication-paper
-all script for figure and analysis of the duplication paper
+all script analysis of the paper "Extensive gene duplication in Arabidopsis revealed by pseudo-heterozygosity"
 
 ### Basic SNP analysis:
 Original VCF matrix 
@@ -20,7 +20,7 @@ Getting the RData from
 https://doi.org/10.1101/2021.11.15.468652
 
 
-## Figure_2: 
+## GWAS analysis: 
 script: Figure2.R
 
 ## Figure_3:
