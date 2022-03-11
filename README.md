@@ -19,9 +19,10 @@ Getting the RData from
 
 https://doi.org/10.1101/2021.11.15.468652
 
+script: Circular_plot.R
 
 ## GWAS analysis: 
-script: Figure2.R
+script: Meta_GWAS_analysis.R
 
 
 
