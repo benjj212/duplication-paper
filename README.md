@@ -24,5 +24,8 @@ script: Circular_plot.R
 ## GWAS analysis: 
 script: Meta_GWAS_analysis.R
 
+## Methylation analysis
+The methylation status were generated using  and can be found in the additionnal file 1-8 of the publication
 
+script: meythylation comparison_ref_vs_pacbio.R
 
