@@ -16,7 +16,7 @@ pygwas run phenotype.csv -a kw -g 1001genomes_genotype -o "file.csv"
 
 ## Circular plot: 
 Getting the RData from 
-https://doi.org/10.1101/2021.11.15.468652
+https://zenodo.org/records/6075080?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImUxOGM2MWRkLWZiNjMtNDkwNi05NWU4LWI4MzUyODkyYzQ4YyIsImRhdGEiOnt9LCJyYW5kb20iOiI4MDY1MDA1NGE5MTFiOTUzMmU3M2U2MjEyZTkzYTI5OCJ9.o7Lemyfm6bnVwDHQhJ1RHiaUgnCQ0hm5xJsYRjChXjvW5V7JrestmMf43XT0VoqdG_ADeJHd8xn5EtHfBkU1xA
 
 script: Circular_plot.R
 
